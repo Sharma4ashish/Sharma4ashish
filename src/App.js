@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import { ThemeProvider, CssBaseline } from '@mui/material';
 import './App.css';
+import { Navbar } from './components/Navbar/Navbar';
+import darkTheme from './Theme/Theme';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={darkTheme} >
+      <CssBaseline/>
+      <Navbar/>
+      </ThemeProvider>
+      <h1>Helloe </h1>
+      <h1 className="text-2xl bg-grey text-blue-200 font-bold underline">asd</h1>
+    </>
   );
 }
 
